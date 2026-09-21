@@ -1,3 +1,17 @@
+import 'package:tv/domain/usecases/get_now_playing_tv.dart';
+import 'package:tv/domain/usecases/get_popular_tv.dart';
+import 'package:tv/domain/usecases/get_top_rated_tv.dart';
+import 'package:tv/domain/usecases/get_tv_detail.dart';
+import 'package:tv/domain/usecases/get_tv_recommendations.dart';
+import 'package:tv/domain/usecases/get_watchlist_tv_status.dart';
+import 'package:tv/domain/usecases/save_tv_watchlist.dart';
+import 'package:tv/domain/usecases/remove_tv_watchlist.dart';
+import 'package:tv/domain/usecases/get_watchlist_tv.dart';
+import 'package:tv/domain/repositories/tv_repository.dart';
+import 'package:tv/data/repositories/tv_repository_impl.dart';
+import 'package:tv/data/datasources/tv_remote_data_source.dart';
+import 'package:tv/data/datasources/tv_local_data_source.dart';
+import 'package:http/io_client.dart';
 import 'package:core/data/datasources/db/database_helper.dart';
 import 'package:movie/data/datasources/movie_local_data_source.dart';
 import 'package:movie/data/datasources/movie_remote_data_source.dart';

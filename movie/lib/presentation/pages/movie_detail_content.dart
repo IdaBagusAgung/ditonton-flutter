@@ -94,15 +94,15 @@ class DetailContent extends StatelessWidget {
                             Text('Recommendations', style: kHeading6),
                             BlocBuilder<MovieDetailBloc, MovieDetailState>(
                               builder: (context, state) {
-                                if (state.movieRecommendationsState ==
+                                if (state.recommendationState ==
                                     RequestState.Loading) {
                                   return Center(
                                     child: CircularProgressIndicator(),
                                   );
-                                } else if (state.movieRecommendationsState ==
+                                } else if (state.recommendationState ==
                                     RequestState.Error) {
                                   return Text(state.message);
-                                } else if (state.movieRecommendationsState ==
+                                } else if (state.recommendationState ==
                                     RequestState.Loaded) {
                                   return SizedBox(
                                     height: 150,
