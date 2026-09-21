@@ -1,6 +1,8 @@
 # a199-flutter-expert-project
 
-Repository ini merupakan starter project submission kelas Flutter Expert Dicoding Indonesia.
+Repository ini merupakan starter project submission kelas Flutter Expert# Ditonton
+
+[![Flutter CI](https://github.com/IdaBagusAgung/ditonton-flutter/actions/workflows/flutter.yml/badge.svg)](https://github.com/IdaBagusAgung/ditonton-flutter/actions)g Indonesia.
 
 ---
 

@@ -1,0 +1,67 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.13.x'
+          channel: 'stable'
+
+      - name: Install Dependencies for Core
+        run: cd core && flutter pub get
+
+      - name: Install Dependencies for Movie
+        run: cd movie && flutter pub get
+
+      - name: Install Dependencies for TV
+        run: cd tv && flutter pub get
+
+      - name: Install Dependencies for Search
+        run: cd search && flutter pub get
+
+      - name: Install Dependencies for About
+        run: cd about && flutter pub get
+
+      - name: Install Dependencies for Root
+        run: flutter pub get
+
+      - name: Analyze Core
+        run: cd core && flutter analyze
+
+      - name: Analyze Movie
+        run: cd movie && flutter analyze
+
+      - name: Analyze TV
+        run: cd tv && flutter analyze
+
+      - name: Analyze Search
+        run: cd search && flutter analyze
+
+      - name: Analyze Root
+        run: flutter analyze
+
+      - name: Run Tests
+        run: |
+          flutter test
+          cd core && flutter test
+          cd movie && flutter test
+          cd tv && flutter test
+          cd search && flutter test
