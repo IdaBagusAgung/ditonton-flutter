@@ -51,9 +51,9 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
               newState.watchlistMessage != '';
         },
         builder: (context, state) {
-          if (state.detailState == RequestState.Loading) {
+          if (state.detailState == RequestState.loading) {
             return Center(child: CircularProgressIndicator());
-          } else if (state.detailState == RequestState.Loaded) {
+          } else if (state.detailState == RequestState.loaded) {
             final movie = state.detail!;
             return SafeArea(
               child: DetailContent(
@@ -62,7 +62,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                 state.isAddedToWatchlist,
               ),
             );
-          } else if (state.detailState == RequestState.Error) {
+          } else if (state.detailState == RequestState.error) {
             return Center(child: Text(state.message));
           } else {
             return Container();

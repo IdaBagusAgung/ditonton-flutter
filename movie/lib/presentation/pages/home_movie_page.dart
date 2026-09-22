@@ -66,7 +66,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               leading: Icon(Icons.save_alt),
               title: Text('Watchlist Movies'),
               onTap: () {
-                Navigator.pushNamed(context, WATCHLIST_MOVIES_ROUTE);
+                Navigator.pushNamed(context, watchlistMoviesRoute);
               },
             ),
             ListTile(
@@ -78,7 +78,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
             ),
             ListTile(
               onTap: () {
-                Navigator.pushNamed(context, ABOUT_ROUTE);
+                Navigator.pushNamed(context, aboutRoute);
               },
               leading: Icon(Icons.info_outline),
               title: Text('About'),
@@ -91,7 +91,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SEARCH_ROUTE);
+              Navigator.pushNamed(context, searchRoute);
             },
             icon: Icon(Icons.search),
           ),
@@ -120,7 +120,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               _buildSubHeading(
                 title: 'Popular',
                 onTap: () =>
-                    Navigator.pushNamed(context, POPULAR_MOVIES_ROUTE),
+                    Navigator.pushNamed(context, popularMoviesRoute),
               ),
               BlocBuilder<PopularMoviesBloc, PopularMoviesState>(
                 builder: (context, state) {
@@ -138,7 +138,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               _buildSubHeading(
                 title: 'Top Rated',
                 onTap: () =>
-                    Navigator.pushNamed(context, TOP_RATED_ROUTE),
+                    Navigator.pushNamed(context, topRatedRoute),
               ),
               BlocBuilder<TopRatedMoviesBloc, TopRatedMoviesState>(
                 builder: (context, state) {
@@ -198,14 +198,14 @@ class MovieList extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(
                   context,
-                  MOVIE_DETAIL_ROUTE,
+                  movieDetailRoute,
                   arguments: movie.id,
                 );
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(16)),
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${movie.posterPath}',
+                  imageUrl: '$baseImageUrl${movie.posterPath}',
                   placeholder: (context, url) =>
                       Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) => Icon(Icons.error),

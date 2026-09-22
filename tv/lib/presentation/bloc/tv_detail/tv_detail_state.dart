@@ -41,9 +41,9 @@ class TVDetailState extends Equatable {
 
   factory TVDetailState.initial() {
     return const TVDetailState(
-      detailState: RequestState.Empty,
+      detailState: RequestState.empty,
       detail: null,
-      recommendationState: RequestState.Empty,
+      recommendationState: RequestState.empty,
       recommendations: [],
       isAddedToWatchlist: false,
       watchlistMessage: '',

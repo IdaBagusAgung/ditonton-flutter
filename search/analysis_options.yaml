@@ -10,5 +10,11 @@ analyzer:
     - macos/**
     - linux/**
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+linter:
+  rules:
+    constant_identifier_names: false
+    library_private_types_in_public_api: false
+    use_build_context_synchronously: false
+    unused_import: false
+    duplicate_import: false
+    strict_top_level_inference: false

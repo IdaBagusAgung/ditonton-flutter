@@ -95,15 +95,15 @@ class DetailContent extends StatelessWidget {
                             BlocBuilder<MovieDetailBloc, MovieDetailState>(
                               builder: (context, state) {
                                 if (state.recommendationState ==
-                                    RequestState.Loading) {
+                                    RequestState.loading) {
                                   return Center(
                                     child: CircularProgressIndicator(),
                                   );
                                 } else if (state.recommendationState ==
-                                    RequestState.Error) {
+                                    RequestState.error) {
                                   return Text(state.message);
                                 } else if (state.recommendationState ==
-                                    RequestState.Loaded) {
+                                    RequestState.loaded) {
                                   return SizedBox(
                                     height: 150,
                                     child: ListView.builder(
@@ -116,7 +116,7 @@ class DetailContent extends StatelessWidget {
                                             onTap: () {
                                               Navigator.pushReplacementNamed(
                                                 context,
-                                                MOVIE_DETAIL_ROUTE,
+                                                movieDetailRoute,
                                                 arguments: movie.id,
                                               );
                                             },

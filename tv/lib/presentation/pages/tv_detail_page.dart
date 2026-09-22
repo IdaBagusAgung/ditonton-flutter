@@ -51,9 +51,9 @@ class _TVDetailPageState extends State<TVDetailPage> {
               newState.watchlistMessage != '';
         },
         builder: (context, state) {
-          if (state.detailState == RequestState.Loading) {
+          if (state.detailState == RequestState.loading) {
             return Center(child: CircularProgressIndicator());
-          } else if (state.detailState == RequestState.Loaded) {
+          } else if (state.detailState == RequestState.loaded) {
             final tv = state.detail!;
             return SafeArea(
               child: TVDetailContent(
@@ -62,7 +62,7 @@ class _TVDetailPageState extends State<TVDetailPage> {
                 state.isAddedToWatchlist,
               ),
             );
-          } else if (state.detailState == RequestState.Error) {
+          } else if (state.detailState == RequestState.error) {
             return Center(child: Text(state.message));
           } else {
             return Container();

@@ -70,19 +70,19 @@ class _HomeTVPageState extends State<HomeTVPage> {
               leading: Icon(Icons.save_alt),
               title: Text('Watchlist Movies'),
               onTap: () {
-                Navigator.pushNamed(context, WATCHLIST_MOVIES_ROUTE);
+                Navigator.pushNamed(context, watchlistMoviesRoute);
               },
             ),
             ListTile(
               leading: Icon(Icons.save_alt),
               title: Text('Watchlist TV'),
               onTap: () {
-                Navigator.pushNamed(context, WATCHLIST_TV_ROUTE);
+                Navigator.pushNamed(context, watchlistTvRoute);
               },
             ),
             ListTile(
               onTap: () {
-                Navigator.pushNamed(context, ABOUT_ROUTE);
+                Navigator.pushNamed(context, aboutRoute);
               },
               leading: Icon(Icons.info_outline),
               title: Text('About'),
@@ -95,7 +95,7 @@ class _HomeTVPageState extends State<HomeTVPage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SEARCH_TV_ROUTE);
+              Navigator.pushNamed(context, searchTvRoute);
             },
             icon: Icon(Icons.search),
           ),
@@ -110,7 +110,7 @@ class _HomeTVPageState extends State<HomeTVPage> {
               _buildSubHeading(
                 title: 'Now Playing',
                 onTap: () =>
-                    Navigator.pushNamed(context, NOW_PLAYING_TV_ROUTE),
+                    Navigator.pushNamed(context, nowPlayingTvRoute),
               ),
               BlocBuilder<NowPlayingTVBloc, NowPlayingTVState>(
                 builder: (context, state) {
@@ -128,7 +128,7 @@ class _HomeTVPageState extends State<HomeTVPage> {
               _buildSubHeading(
                 title: 'Popular',
                 onTap: () =>
-                    Navigator.pushNamed(context, POPULAR_TV_ROUTE),
+                    Navigator.pushNamed(context, popularTvRoute),
               ),
               BlocBuilder<PopularTVBloc, PopularTVState>(
                 builder: (context, state) {
@@ -146,7 +146,7 @@ class _HomeTVPageState extends State<HomeTVPage> {
               _buildSubHeading(
                 title: 'Top Rated',
                 onTap: () =>
-                    Navigator.pushNamed(context, TOP_RATED_TV_ROUTE),
+                    Navigator.pushNamed(context, topRatedTvRoute),
               ),
               BlocBuilder<TopRatedTVBloc, TopRatedTVState>(
                 builder: (context, state) {
@@ -206,14 +206,14 @@ class TVList extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(
                   context,
-                  TV_DETAIL_ROUTE,
+                  tvDetailRoute,
                   arguments: tv.id,
                 );
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(16)),
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${tv.posterPath}',
+                  imageUrl: '$baseImageUrl${tv.posterPath}',
                   placeholder: (context, url) =>
                       Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) => Icon(Icons.error),

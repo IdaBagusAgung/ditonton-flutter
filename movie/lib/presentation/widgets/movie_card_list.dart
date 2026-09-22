@@ -18,7 +18,7 @@ class MovieCard extends StatelessWidget {
         onTap: () {
           Navigator.pushNamed(
             context,
-            MOVIE_DETAIL_ROUTE,
+            movieDetailRoute,
             arguments: movie.id,
           );
         },
@@ -56,7 +56,7 @@ class MovieCard extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(8)),
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${movie.posterPath}',
+                  imageUrl: '$baseImageUrl${movie.posterPath}',
                   width: 80,
                   placeholder: (context, url) =>
                       Center(child: CircularProgressIndicator()),

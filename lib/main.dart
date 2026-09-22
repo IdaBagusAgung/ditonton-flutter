@@ -97,39 +97,39 @@ class MyApp extends StatelessWidget {
           switch (settings.name) {
             case '/home':
               return MaterialPageRoute(builder: (_) => HomeMoviePage());
-            case POPULAR_MOVIES_ROUTE:
+            case popularMoviesRoute:
               return CupertinoPageRoute(builder: (_) => PopularMoviesPage());
-            case TOP_RATED_ROUTE:
+            case topRatedRoute:
               return CupertinoPageRoute(builder: (_) => TopRatedMoviesPage());
-            case MOVIE_DETAIL_ROUTE:
+            case movieDetailRoute:
               final id = settings.arguments as int? ?? 0;
               return MaterialPageRoute(
                 builder: (_) => MovieDetailPage(id: id),
                 settings: settings,
               );
-            case SEARCH_ROUTE:
+            case searchRoute:
               return CupertinoPageRoute(builder: (_) => SearchPage());
-            case WATCHLIST_MOVIES_ROUTE:
+            case watchlistMoviesRoute:
               return MaterialPageRoute(builder: (_) => WatchlistMoviesPage());
-            case HOME_TV_ROUTE:
+            case homeTvRoute:
               return MaterialPageRoute(builder: (_) => HomeTVPage());
-            case NOW_PLAYING_TV_ROUTE:
+            case nowPlayingTvRoute:
               return CupertinoPageRoute(builder: (_) => NowPlayingTVPage());
-            case POPULAR_TV_ROUTE:
+            case popularTvRoute:
               return CupertinoPageRoute(builder: (_) => PopularTVPage());
-            case TOP_RATED_TV_ROUTE:
+            case topRatedTvRoute:
               return CupertinoPageRoute(builder: (_) => TopRatedTVPage());
-            case TV_DETAIL_ROUTE:
+            case tvDetailRoute:
               final id = settings.arguments as int? ?? 0;
               return MaterialPageRoute(
                 builder: (_) => TVDetailPage(id: id),
                 settings: settings,
               );
-            case SEARCH_TV_ROUTE:
+            case searchTvRoute:
               return CupertinoPageRoute(builder: (_) => SearchTVPage());
-            case WATCHLIST_TV_ROUTE:
+            case watchlistTvRoute:
               return MaterialPageRoute(builder: (_) => WatchlistTVPage());
-            case SEASON_DETAIL_ROUTE:
+            case seasonDetailRoute:
               final args = settings.arguments as SeasonDetailArguments;
               return MaterialPageRoute(
                 builder: (_) => SeasonDetailPage(
@@ -137,7 +137,7 @@ class MyApp extends StatelessWidget {
                   seasonNumber: args.seasonNumber,
                 ),
               );
-            case ABOUT_ROUTE:
+            case aboutRoute:
               return MaterialPageRoute(builder: (_) => AboutPage());
             default:
               return MaterialPageRoute(

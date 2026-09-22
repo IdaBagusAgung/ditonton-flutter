@@ -105,7 +105,7 @@ class TVDetailContent extends StatelessWidget {
                                       onTap: () {
                                         Navigator.pushNamed(
                                           context,
-                                          SEASON_DETAIL_ROUTE,
+                                          seasonDetailRoute,
                                           arguments: SeasonDetailArguments(
                                             tvId: tv.id,
                                             seasonNumber: season.seasonNumber,
@@ -185,15 +185,15 @@ class TVDetailContent extends StatelessWidget {
                             BlocBuilder<TVDetailBloc, TVDetailState>(
                               builder: (context, state) {
                                 if (state.recommendationState ==
-                                    RequestState.Loading) {
+                                    RequestState.loading) {
                                   return Center(
                                     child: CircularProgressIndicator(),
                                   );
                                 } else if (state.recommendationState ==
-                                    RequestState.Error) {
+                                    RequestState.error) {
                                   return Text(state.message);
                                 } else if (state.recommendationState ==
-                                    RequestState.Loaded) {
+                                    RequestState.loaded) {
                                   return SizedBox(
                                     height: 150,
                                     child: ListView.builder(
@@ -206,7 +206,7 @@ class TVDetailContent extends StatelessWidget {
                                             onTap: () {
                                               Navigator.pushReplacementNamed(
                                                 context,
-                                                TV_DETAIL_ROUTE,
+                                                tvDetailRoute,
                                                 arguments: tvRec.id,
                                               );
                                             },
