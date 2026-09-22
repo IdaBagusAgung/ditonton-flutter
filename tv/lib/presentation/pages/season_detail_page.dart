@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/common/constants.dart';
-import 'package:core/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tv/presentation/bloc/season_detail/season_detail_bloc.dart';

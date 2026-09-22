@@ -40,7 +40,6 @@ import 'package:tv/presentation/bloc/popular_tv/popular_tv_bloc.dart';
 import 'package:tv/presentation/bloc/top_rated_tv/top_rated_tv_bloc.dart';
 import 'package:tv/presentation/bloc/tv_detail/tv_detail_bloc.dart';
 import 'package:tv/presentation/bloc/season_detail/season_detail_bloc.dart';
-import 'package:tv/domain/usecases/get_tv_season_detail.dart';
 import 'package:search/presentation/bloc/tv_search/tv_search_bloc.dart';
 import 'package:tv/presentation/bloc/watchlist_tv/watchlist_tv_bloc.dart';
 

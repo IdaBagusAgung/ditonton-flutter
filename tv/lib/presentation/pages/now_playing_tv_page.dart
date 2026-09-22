@@ -1,4 +1,3 @@
-import 'package:core/common/state_enum.dart';
 import 'package:tv/presentation/bloc/now_playing_tv/now_playing_tv_bloc.dart';
 import 'package:tv/presentation/widgets/tv_card_list.dart';
 import 'package:flutter/material.dart';

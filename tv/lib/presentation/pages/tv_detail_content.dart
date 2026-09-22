@@ -8,9 +8,7 @@ import 'package:core/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tv/presentation/pages/tv_detail_page.dart';
 import 'package:tv/presentation/pages/season_detail_page.dart';
-import 'package:core/common/routes.dart';
 
 class TVDetailContent extends StatelessWidget {
   final TVDetail tv;

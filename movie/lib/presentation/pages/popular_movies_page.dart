@@ -1,4 +1,3 @@
-import 'package:core/common/state_enum.dart';
 import 'package:movie/presentation/bloc/popular_movies/popular_movies_bloc.dart';
 import 'package:movie/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';

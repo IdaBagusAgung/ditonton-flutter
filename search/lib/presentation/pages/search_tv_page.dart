@@ -1,5 +1,4 @@
 import 'package:core/common/constants.dart';
-import 'package:core/common/state_enum.dart';
 import 'package:search/presentation/bloc/tv_search/tv_search_bloc.dart';
 import 'package:tv/presentation/widgets/tv_card_list.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,3 @@
-import 'package:core/common/state_enum.dart';
 import 'package:core/common/utils.dart';
 import 'package:tv/presentation/bloc/watchlist_tv/watchlist_tv_bloc.dart';
 import 'package:tv/presentation/widgets/tv_card_list.dart';

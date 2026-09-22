@@ -9,7 +9,6 @@ import 'package:core/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie/presentation/pages/movie_detail_page.dart';
 
 class DetailContent extends StatelessWidget {
   final MovieDetail movie;
