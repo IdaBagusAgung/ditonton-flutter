@@ -57,10 +57,17 @@ jobs:
       - name: Analyze Root
         run: flutter analyze
 
-      - name: Run Tests
-        run: |
-          flutter test
-          cd core && flutter test
-          cd movie && flutter test
-          cd tv && flutter test
-          cd search && flutter test
+      - name: Run Tests for Core
+        run: cd core && flutter test
+
+      - name: Run Tests for Movie
+        run: cd movie && flutter test
+
+      - name: Run Tests for TV
+        run: cd tv && flutter test
+
+      - name: Run Tests for Search
+        run: cd search && flutter test
+
+      - name: Run Tests for About
+        run: cd about && flutter test
