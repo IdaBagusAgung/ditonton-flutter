@@ -27,6 +27,7 @@ import 'package:movie/domain/usecases/get_watchlist_status.dart';
 import 'package:movie/domain/usecases/remove_watchlist.dart';
 import 'package:movie/domain/usecases/save_watchlist.dart';
 import 'package:search/domain/usecases/search_movies.dart';
+import 'package:search/domain/usecases/search_tv.dart';
 import 'package:movie/presentation/bloc/now_playing_movies/now_playing_movies_bloc.dart';
 import 'package:movie/presentation/bloc/popular_movies/popular_movies_bloc.dart';
 import 'package:movie/presentation/bloc/top_rated_movies/top_rated_movies_bloc.dart';

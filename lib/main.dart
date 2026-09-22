@@ -47,7 +47,11 @@ void main() async {
   } catch (e) {
     print("Firebase initialization failed: $e");
   }
-  await di.init();
+  try {
+    await di.init();
+  } catch (e, stacktrace) {
+    print("Initialization failed: $e\n$stacktrace");
+  }
   runApp(MyApp());
 }
 

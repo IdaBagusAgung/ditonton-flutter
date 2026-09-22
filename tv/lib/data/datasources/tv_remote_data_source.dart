@@ -4,6 +4,7 @@ import 'package:core/common/exception.dart';
 import 'package:tv/data/models/tv_detail_model.dart';
 import 'package:tv/data/models/tv_model.dart';
 import 'package:tv/data/models/tv_response.dart';
+import 'package:tv/data/models/season_detail_model.dart';
 import 'package:http/http.dart' as http;
 
 abstract class TVRemoteDataSource {
@@ -95,6 +96,19 @@ class TVRemoteDataSourceImpl implements TVRemoteDataSource {
 
     if (response.statusCode == 200) {
       return TVResponse.fromJson(json.decode(response.body)).tvList;
+    } else {
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<SeasonDetailModel> getTVSeasonDetail(int id, int seasonNumber) async {
+    final response = await client.get(
+      Uri.parse('$BASE_URL/tv/$id/season/$seasonNumber?$API_KEY'),
+    );
+
+    if (response.statusCode == 200) {
+      return SeasonDetailModel.fromJson(json.decode(response.body));
     } else {
       throw ServerException();
     }
